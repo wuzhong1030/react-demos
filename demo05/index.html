@@ -8,27 +8,26 @@
   <body>
     <div id="example"></div>
     <script type="text/babel">
-      var NotesList = React.createClass({
-        render: function() {
+      var NodeList = React.createClass({
+        render: function () {
           return (
-            <ol>
+            <ul>
               {
                 React.Children.map(this.props.children, function (child) {
-                  return <li>{child}</li>;
+                  return <li> { child } </li>;
                 })
               }
-            </ol>
+            </ul>
           );
         }
       });
-
       ReactDOM.render(
-        <NotesList>
-          <span>hello</span>
-          <span>world</span>
-        </NotesList>,
+        <NodeList>
+    <span>hello</span>
+    <span>world</span>
+  </NodeList>,
         document.getElementById('example')
-      );
+      )
     </script>
   </body>
 </html>
